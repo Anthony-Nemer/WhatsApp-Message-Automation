@@ -29,7 +29,7 @@ try:
     conn = mysql.connector.connect(
         host='127.0.0.1',
         user='root',
-        password='nemeranthony2004@',
+        password='nemeranthony',
         database='whatsApp_system'
     )
     cursor = conn.cursor()
@@ -77,19 +77,10 @@ for index, row in df.iterrows():
 
     # Format message & encode it properly
     message = """\
-📢 Dear Partner,
-Your policy premium is overdue. Refer to your sales representative or log-in on www.earope.com, or www.arope.com for smooth settlement. Feel free to visit our branches, pay through OMT or request our courier services – 1219.
-
-حضرة المؤمن ،
-
-لقد تأخر تسديد قسط بوليصة التأمين الخاصة بكم، يرجى التواصل مع مندوب المبيعات، الدفع عبر  www.earope.com أو www.arope.com . كما يمكنكم زيارة فروعنا، الدفع في OMT أو طلب خدمات البريد على1219
-
-If you have received this message in error, please disregard it. We apologize for any inconvenience caused
-
-For clarifications:
-📞 Call us: 📲 1219
-🌐 Visit our website: https://www.arope.com/en/pay
-👤 Access Client Space: https://clientspace.arope.com/AropeWeb/login/Login.aspx
+        Enter your message here.
+        You can include variables like this:    
+        Name: {name}
+        Amount: {amount}
         """
 
     encoded_message = urllib.parse.quote(message)
